@@ -4,7 +4,6 @@
 
 Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state's population. With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (ACA) which gave states the option to expand their Medicaid programs to cover more low-income adults aged 19-64, actually helped to increase the populations health. 
 
- and 
 ## Table of contents
 * [Technologies](#technologies)
 * [Data Acquisition](#data-acquisition)
@@ -23,7 +22,7 @@ Project created with:
  - Pingouin
  - Scipy
 
-## Data Acquisitioncan 
+## Data Acquisition 
 
 Health is best measured by looking at the state's public health (rate of disease), access to healthcare, and quality of care. 
 
@@ -32,22 +31,29 @@ The data used for analysis in this project was pulled from CDC WONDER and the Un
   - Public Health Datasets:
     - State Heart Disease Death Rate per 100,000
     - State Cancer Death Rate per 100,000 
-    - Adults Reporting Poor Mental Health Status in the Last 30 Days
-    - Adults Self Reported Fair or Poor Health Status
-    -
+    - Adults Self Reported Mental Health Status in the Last 30 Days
+    - Adults Self Reported Health Status
+    - Adults that are overweight or obeses in a state
+    - Adults with Diabetes
+    - State Stroke Death Rate per 100,000
+    - Physical Activity
+    - Suicide Rate
+    - Mortality Rate
       
   - Access to Healthcare Datasets:
     - State Uninsured Rates
     - Rates of individuals who had trouble paying off medical bills during past twelve month
     - Percent of adults who could not get medical care when needed due to cost by Total
+    - Out-of-Pocket Cost
+    - Single Insurance Premium
  
  - States' Stance on Adoption of Expanded Medicare Coverage
 
 
 ## Data Processing
 The data was pulled from each website and loaded into a single excel file:
-  - All states All Data Collected.xlsx contains alll data collected for every state  
-  - All states Correlation Data.xlsx has cleaned data 
+  - All states All Data Collected.xlsx contains all data collected for every state  
+  - All states Correlation Data.xlsx has the data used for significance testing 
   
 Since the datasets are all from 2018 and contained data for all states, they were then split into two sets:
 
@@ -57,7 +63,15 @@ Since the datasets are all from 2018 and contained data for all states, they wer
 
 ## Exploratory Data Analysis
 
-The scatter matrix plot of all the data in all states show correlation between categories and and it appears most the data is normally distributed. 
+The scatter matrix plot of all data collected in all states shows correlation between many categories and it appears most the data is normally distributed as you would expect from a population. 
+
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_all_states_all_data.png)
+
+I then used a heatmap matrix to better see the correlations between the data, so I could eliminate data that was not useful or did not speak to changes in medicare. Example - physical activity is a good indicator of health, but should not change the health in a state due to expanded medicare coverage. 
+
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_all_states_all_data.png)
+
+Then, after eliminating extra data, I reran the scatter matrix plot of the data going to be used for significance testing for all states. It showed high correlation between the categories and it appears most the data is normally distributed. 
 
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_all_states.png)
 
