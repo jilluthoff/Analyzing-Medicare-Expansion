@@ -117,7 +117,7 @@ Question: Do states that have expanded Medicaid Coverage differ in public health
        
        ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,hd != Mean_not_expanded,hd
 
-       T-Statistic: -1.3163328545331339, P-Value: 0.1961643312117037, P < alpha: False
+       T-Statistic: -1.31633, P-Value: 0.19616, P < alpha: False
      
        Reject the null hypothesis, there is no difference in rates of heart disease deaths in states.
      
@@ -132,7 +132,7 @@ Question: Do states that have expanded Medicaid Coverage differ in public health
        
       ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,c != Mean_not_expanded,c
       
-       T-Statistic: -1.1487430227472555, P-Value: 0.2577782787860322, P < alpha: False
+       T-Statistic: -1.14874, P-Value: 0.257778, P < alpha: False
       
        Reject the null hypothesis, there is no difference in rates deaths due to cancer in states with.
   
@@ -147,7 +147,7 @@ Question: Do states that have expanded Medicaid Coverage differ in public health
        
       ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,ph != Mean_not_expanded,ph
      
-       T-Statistic: -1.0040284567079194, P-Value: 0.32097665837535233, P < alpha: False
+       T-Statistic: -1.00402, P-Value: 0.32097, P < alpha: False
      
        Reject the null hypothesis, there is no difference in self reported poor health in states.
     
@@ -162,7 +162,7 @@ Question: Do states that have expanded Medicaid Coverage differ in public health
        
         ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,pmh != Mean_not_expanded,pmh
      
-        T-Statistic: -6.613280558230961, P-Value: 2.9035039542281128e-08, P < alpha: True
+        T-Statistic: -6.61328, P-Value: 2.90350e-08, P < alpha: True
      
         Do not reject the null hypothesis, there is a difference in self reported poor mental health in states.
 
@@ -182,7 +182,7 @@ NOTE: A Bonferroni correction is used again to compensates for testing each indi
        
         ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,uninisured != Mean_not_expanded,uninsured
      
-        T-Statistic: -5.301286919330062, P-Value: 8.036374628111582e-06, P < alpha: True
+        T-Statistic: -5.30128, P-Value: 8.03637e-06, P < alpha: True
      
         Do not reject the null hypothesis, there is a difference in percentage of uninsured adults in states.
   
@@ -197,7 +197,7 @@ NOTE: A Bonferroni correction is used again to compensates for testing each indi
        
        ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,cost != Mean_not_expanded,cost
      
-       T-Statistic: -4.33073454830087, P-Value: 0.00011889736816692388, P < alpha: True
+       T-Statistic: -4.33, P-Value: 0.0001188, P < alpha: True
   
        Do not reject the null hypothesis, there is a difference in percentage of adults who do not get care due to cost in states.
         
@@ -212,7 +212,7 @@ NOTE: A Bonferroni correction is used again to compensates for testing each indi
        
       ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,bills != Mean_not_expanded,bills
       
-       T-Statistic: -4.865100870341971, P-Value: 1.3536393772301125e-05, P < alpha: True
+       T-Statistic: -4.8651, P-Value: 1.3536e-05, P < alpha: True
       
        Do not reject the null hypothesis, there is a difference in percentage of adults who have trouble paying off medical bills in states.
        
