@@ -1,8 +1,10 @@
-# Is there a difference? Analyzing if Medicare expansion helped increase health characteristics in a state.  
-With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (ACA) which gave states the option to expand their Medicaid programs to cover more low-income adults aged 19-64, actually helped to increase the populations health. 
+# Is there a difference? Analyzing if Medicare expansion helped increase health characteristics in a state that adpoted and implemented the expansion.  
 
-Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state's population, and can best be measured by looking at the state's public health (rate of disease), access to healthcare, and quality of care. 
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Screen%20Shot%202020-07-24%20at%201.18.57%20AM.png)
 
+Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state's population. With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (ACA) which gave states the option to expand their Medicaid programs to cover more low-income adults aged 19-64, actually helped to increase the populations health. 
+
+ and 
 ## Table of contents
 * [Technologies](#technologies)
 * [Data Acquisition](#data-acquisition)
@@ -21,7 +23,10 @@ Project created with:
  - Pingouin
  - Scipy
 
-## Data Acquisition
+## Data Acquisitioncan 
+
+Health is best measured by looking at the state's public health (rate of disease), access to healthcare, and quality of care. 
+
 The data used for analysis in this project was pulled from CDC WONDER and the United States Census Bureau, and included the following datasets:
 
   - Public Health Datasets:
@@ -29,6 +34,7 @@ The data used for analysis in this project was pulled from CDC WONDER and the Un
     - State Cancer Death Rate per 100,000 
     - Adults Reporting Poor Mental Health Status in the Last 30 Days
     - Adults Self Reported Fair or Poor Health Status
+    -
       
   - Access to Healthcare Datasets:
     - State Uninsured Rates
