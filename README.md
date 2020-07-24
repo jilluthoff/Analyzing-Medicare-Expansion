@@ -1,4 +1,4 @@
-# Is there really a difference? How Medicare expansion helped increase specific characteristics of health in a state.  
+# Is there a difference? Analyzing if Medicare expansion helped increase health characteristics in a state.  
 With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (ACA) which gave states the option to expand their Medicaid programs to cover more low-income adults aged 19-64, actually helped to increase the populations health. 
 
 Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state's population, and can best be measured by looking at the state's public health (rate of disease), access to healthcare, and quality of care. 
@@ -189,8 +189,9 @@ NOTE: A Bonferroni correction is used again to compensates for testing each indi
        
 
 ## Conclusion
-As expected, there was in a difference in uninsured adult rates between the two groups. 
+
+As expected, there was an increase in access to healthcare for states that expanded coverage, however surprisingly that increase has only helped improve mental health in those states.
 
 ## Future Steps
 
-In the future I would like to collect more data on health care cost, spending, and quality to see how they have been effected by the affordable care act, and possibly try to expand the data to compare the United States health and healthcare to other countries. 
+In the future I would like to collect more data on health care cost, spending, quality, and equality to see how they have been effected by the affordable care act, and possibly try to expand the data to compare the United States health and healthcare to other countries. 
