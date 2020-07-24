@@ -10,16 +10,16 @@ Health is a strong indicator of quality of life, and provides insight into acces
 * [Exploratory Data Analysis](#exploratory-data-analysis)
 * [Hypothesis Testing](#hypothesis-testing)
 * [Conclusion](#conclusion)
-* [Future Work](#future-work)
+* [Future Steps](#future-steps)
 
 ## Technologies
 Project created with:
-* Python
-* Pandas
-* Matplotlib/Seaborn
-* Excel
-* Pingouin
-* Scipy
+ - Python
+ - Pandas
+ - Matplotlib/Seaborn
+ - Excel
+ - Pingouin
+ - Scipy
 
 ## Data Acquisition
 The data used for analysis in this project include was pulled from the CDC WONDER and United States Census Bureau.
@@ -64,24 +64,72 @@ A scatter matrix plot of the data in states that have not expanded medicare cove
 ## Hypothesis Testing
 I used Welch's t-test to answer if the means of the two samples (states with expanded medicare coverage vs states without expanded medicare coverage) were equal, since the populations differ in size, therefore the variance is unequal. I also assumped the two sample distributions were normally distributed, which can be inferred from the analysis above. 
 
+
+![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.05)
+
+
 Question: Do states that have expanded Medicaid Coverage differ in public health characteristics?
+  
+  NOTE: A Bonferroni correction is used to compensates for testing each individual hypothesis simultaneously. Therefore, the following 4 tests will use a significance level of ![formula](https://render.githubusercontent.com/render/math?math=\alpha/4).
+  ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.0125)
+  
   1. Death rates due to heart disease
-        $$ H_0: \ \mu_E \leq \mu_N $$
+  
+       ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean death rate due to heart disease for states that expanded coverage = Mean death rate due to heart disease for states that have not expanded coverage. 
+       
+       ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,hd != Mean_not_expanded,hd
+
+ 
   
   
   2. Death rates due to cancer
   
+      ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean death rate due to cancer for states that expanded coverage = Mean death rate for states that have not expanded coverage. 
+       
+      ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,c != Mean_not_expanded,c
+  
   
   3. Reported Poor Health
   
+     ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of people who report poor health in states that expanded coverage = Mean percentage of people who report poor health in states that did not expand coverage. 
+       
+     ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,ph != Mean_not_expanded,ph
+    
   
   4. Reported Poor Mental Health
+ 
+     ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of people who report poor mental health in states that expanded coverage = Mean percentage of people who report poor mental health in states that did not expand coverage. 
+       
+     ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,pmh != Mean_not_expanded,pmh
+
 
 Question: Do states that have expanded Medicaid Coverage differ in access to healthcare?
+
+NOTE: A Bonferroni correction is used again to compensates for testing each individual hypothesis simultaneously. Therefore for the following 3 tests will use a significance level of ![formula](https://render.githubusercontent.com/render/math?math=\alpha/3).
+ ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.0167)
+  
   1. Percentage of Uninsured Adults
   
+     ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of uninsured adults in states that expanded coverage = Mean percentage of uninsured adults in states that have not expanded coverage. 
+       
+     ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,uninisured != Mean_not_expanded,uninsured
+  
+  
   2. Reported inability to get care due to cost
+ 
+     ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of adults that report an inibility to get care due to cost in states that states that expanded coverage = Mean percentage of adults that report an inibility to get care due to cost in states that have not expanded coverage. 
+       
+     ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,cost != Mean_not_expanded,cost
+  
   
   3. Rates of individuals who had trouble paying off medical bills during past twelve month
+  
+      ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of adults that have trouble paying off medical bills for states that expanded coverage = Mean percentage of adults that have trouble paying off medical bills for states that have not expanded coverage. 
+       
+      ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,bills != Mean_not_expanded,bills
 
 ## Conclusion
+
+
+## Future Steps
+In the future I would like to collect more data on health care cost, spending, and quality to see how they have been effected by the affordable care act, and possibly try to expand the data to compare the United States health and healthcare to other countries. 
