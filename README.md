@@ -1,10 +1,10 @@
-# Is there really a difference? Has expanded Medicare helped increase public health in a state.  
+# Is there really a difference? How Medicare expansion helped increase specific characteristics of health in a state.  
 With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (ACA) which gave states the option to expand their Medicaid programs to cover more low-income adults aged 19-64, actually helped to increase the populations health. 
 
-Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state of a population therefore is best measured by looking at the state's public health (rate of disease), access to healthcare, and quality of care. 
+Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state's population, and can best be measured by looking at the state's public health (rate of disease), access to healthcare, and quality of care. 
 
 ## Data Sets
-The data used for this project included:
+The data used for analysis in this project included:
 
   - Public Health Data:
     - State Heart Disease Death Rate per 100,000
@@ -40,8 +40,7 @@ I used Welch's t-test to answer if the means of the two samples (states with exp
 
 Question: Do states that have expanded Medicaid Coverage differ in public health characteristics?
   1. Death rates due to heart disease
-  
-$$ H_0: \ \mu_E \leq \mu_N $$
+        $$ H_0: \ \mu_E \leq \mu_N $$
   
   
   2. Death rates due to cancer
@@ -52,6 +51,11 @@ $$ H_0: \ \mu_E \leq \mu_N $$
   
   4. Reported Poor Mental Health
 
-Question: Do states that have expanded Medicaid Coverage differ in reported poor mental health?
+Question: Do states that have expanded Medicaid Coverage differ in access to healthcare?
+  1. Percentage of Uninsured Adults
+  
+  2. Reported inability to get care due to cost
+  
+  3. Rates of individuals who had trouble paying off medical bills during past twelve month
 
 
