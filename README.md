@@ -27,15 +27,15 @@ The data used for analysis in this project was pulled from CDC WONDER and the Un
   - Public Health Datasets:
     - State Heart Disease Death Rate per 100,000
     - State Cancer Death Rate per 100,000 
-    - Adult's Reporting Poor Mental Health Status in the Last 30 Days
-    - Adult's Self Reported Fair or Poor Health Status
+    - Adults Reporting Poor Mental Health Status in the Last 30 Days
+    - Adults Self Reported Fair or Poor Health Status
       
   - Access to Healthcare Datasets:
     - State Uninsured Rates
     - Rates of individuals who had trouble paying off medical bills during past twelve month
     - Percent of adults who could not get medical care when needed due to cost by Total
  
- - State's Stance on Adoption of Expanded Medicare Coverage
+ - States' Stance on Adoption of Expanded Medicare Coverage
 
 
 ## Data Processing
