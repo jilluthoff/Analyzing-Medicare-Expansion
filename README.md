@@ -71,13 +71,8 @@ I then used a heatmap matrix to better see the correlations between the data, so
 
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_all_states_all_data.png)
 
-Then, after eliminating extra data, I reran the scatter matrix plot of the data going to be used for significance testing for all states. It showed high correlation between the categories and it appears most the data is normally distributed. 
+Then, after eliminating extraneous and unuseful data, I reran the scatter matrix plot of the data separated by states that expanded medicare coverage and those that did not. The plots showed high correlation between the categories and it appears most the data is normally distributed. 
 
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_all_states.png)
-
-To better understand the correlations between the categories, I made a heatmap matrix for all states using all categories as well. 
-
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_all_states.png)
 
 
 Then separating the data and looking at the correlation between categories for states that expanded coverage.
@@ -85,7 +80,7 @@ Then separating the data and looking at the correlation between categories for s
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_expanded.png)
 
 
-Again made a heatmap matrix to view the correlations.
+Heatmap matrix to better view and understand the correlations.
 
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_expanded.png)
 
