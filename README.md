@@ -51,19 +51,33 @@ Since the datasets are all from 2018 and contained data for all states, they wer
 
 ## Exploratory Data Analysis
 
-Pairwise correlations show a range of correlations from negative to positive. 
+The scatter matrix plot of all the data in all states show correlation between categories and and it appears most the data is normally distributed. 
 
-![alt text](https://github.com/jilluthoff.png)
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_all_states.png)
 
-A Correlations Heatmap Matrix better shows positive correlations values in red and zero correlations in shades of blue.
+To better understand the correlations between the categories, I made a heatmap matrix for all states using all categories as well. 
 
-
-![alt text](https://github.com/jilluthoff.png)
-
-A scatter matrix plot of the data in states that have expanded medicare coverage shows positive correlations with the data and that most the data is normally distributed.
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_all_states.png)
 
 
-A scatter matrix plot of the data in states that have not expanded medicare coverage shows a few positive correlations with the data and that most the data is normally distributed.
+Then separating the data and looking at the correlation between categories for states that expanded coverage.
+
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_expanded.png)
+
+
+Again made a heatmap matrix to view the correlations.
+
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_expanded.png)
+
+
+Looking at the correlation between categories for states that  did not expanded coverage 
+
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_notex.png)
+
+
+And a heatmap for states that did not expand coverage
+
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_notex.png)
 
 
 ## Hypothesis Testing
