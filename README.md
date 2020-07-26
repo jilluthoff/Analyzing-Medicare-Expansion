@@ -1,10 +1,11 @@
-# Is there a difference? Analyzing if Medicare expansion helped increase health characteristics in a state that adpoted and implemented the expansion.  
+# Is there a difference? Analyzing whether the Affordable Care Act helped increase health in states that adpoted and implemented the expansion.  
 
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Screen%20Shot%202020-07-24%20at%201.18.57%20AM.png)
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Screen%20Shot%202020-07-24%20at%201.18.57%20AM.png)
 
-Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state's population. With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (ACA) which gave states the option to expand their Medicaid programs to cover more low-income adults aged 19-64, actually helped to increase the populations health. 
+With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (aka Obamacare) which gave states the option to expand their Medicaid programs actually helped to increase the populations health.
 
 ## Table of contents
+* [Background](#background)
 * [Technologies](#technologies)
 * [Data Acquisition](#data-acquisition)
 * [Data Processing](#data-processing)
@@ -12,6 +13,17 @@ Health is a strong indicator of quality of life, and provides insight into acces
 * [Hypothesis Testing](#hypothesis-testing)
 * [Conclusion](#conclusion)
 * [Future Steps](#future-steps)
+
+## Background 
+
+Health is a strong indicator of quality of life, and provides insight into access to nutrition, economic challenges and other barriers to health that may persist within a state's population. Medicaid is the nation's public health insurance program for people with low incomes, who would otherwise lack access to affordable health insurance. It limits out-of-pocker costs and covers a broad array of health services. 
+
+The Affordable Care Act (ACA) was passed in 2010 and implented in many states in 2014. It had 3 main goals:
+1. Make health insurance more afforadable and available to more people by providing subsities to households with incomes between 100 and 400% of the federal poverty level.
+2. Expand the Medicaid program to cover all adults with income below 138% of the federal poverty level ($17,236 for an individual in 2019. *Not all states have expanded their programs
+3. Support innovative medical care delivery methods designed to lower the cost of health care generally. 
+
+Coverage for Medicaid expansion adults (people between the ages 19 - 64 who are low income) contains the ACA’s ten “essential health benefits” which include preventive services and expanded mental health and substance use treatment services. Medicaid plays an important role in addressing the opioid epidemic and more broadly in connecting Medicaid beneficiaries to behavioral health (addiction - drinking, smoking, eating) services. 
 
 ## Technologies
 Project created with:
@@ -26,36 +38,31 @@ Project created with:
 
 Health is best measured by looking at the state's public health (rate of disease), access to healthcare, and quality of care. 
 
-The data used for analysis in this project was pulled from CDC WONDER and the United States Census Bureau, and included the following datasets:
+The data used for analysis in this project was pulled from CDC WONDER and the United States Census Bureau and included the following datasets:
 
-  - Public Health Datasets:
-    - State Heart Disease Death Rate per 100,000
-    - State Cancer Death Rate per 100,000 
+  - State Public Health Datasets:
+    - Heart Disease Death Rate per 100,000 
+    - Cancer Death Rate per 100,000
+    - Stroke Death Rate per 100,000
     - Adults Self Reported Mental Health Status in the Last 30 Days
     - Adults Self Reported Health Status
-    - Adults that are overweight or obeses in a state
-    - Adults with Diabetes
-    - State Stroke Death Rate per 100,000
-    - Physical Activity
+    - Adults that Smoke
+    - Adults that are Overweight or Obese
     - Suicide Rate
     - Mortality Rate
+    - Life Expectancy
       
-  - Access to Healthcare Datasets:
+  - State Access to Healthcare Datasets:
     - State Uninsured Rates
     - Rates of individuals who had trouble paying off medical bills during past twelve month
-    - Percent of adults who could not get medical care when needed due to cost by Total
-    - Out-of-Pocket Cost
-    - Single Insurance Premium
- 
- - States' Stance on Adoption of Expanded Medicare Coverage
+    - Percent of adults who could not get medical care when needed due to cost
 
 
 ## Data Processing
 The data was pulled from each website and loaded into a single excel file:
-  - All states All Data Collected.xlsx contains all data collected for every state  
-  - All states Correlation Data.xlsx has the data used for significance testing 
+   - All states All Data Collected.xlsx contains all data collected for every state  
   
-Since the datasets are all from 2018 and contained data for all states, they were then split into two sets:
+There was little processing needed, as all the data collected contained values for all states, so the data was then split into two sets:
 
    - 31 states that have adpoted and expanded Medicare coverage: HEALTH DATA Adopted.xlsx
    - 19 states that have either not adopted Medicare expansion (13 states) or have not expanded it (6 states) prior to 2018 when: Health Data Not Adopted.xlsx
