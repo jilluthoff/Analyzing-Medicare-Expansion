@@ -1,6 +1,6 @@
 # Is there a difference? Analyzing whether the Affordable Care Act helped increase health in states that adpoted and implemented the expansion.  
 
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Screen%20Shot%202020-07-24%20at%201.18.57%20AM.png)
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/STATES_MEDICARE.png)
 
 With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (aka Obamacare) which gave states the option to expand their Medicaid programs actually helped to increase the populations health.
 
@@ -24,6 +24,8 @@ The Affordable Care Act (ACA) was passed in 2010 and implented in many states in
 3. Support innovative medical care delivery methods designed to lower the cost of health care generally. 
 
 Coverage for Medicaid expansion adults (people between the ages 19 - 64 who are low income) contains the ACA’s ten “essential health benefits” which include preventive services and expanded mental health and substance use treatment services. Medicaid plays an important role in addressing the opioid epidemic and more broadly in connecting Medicaid beneficiaries to behavioral health (addiction - drinking, smoking, eating) services. 
+
+The goal of this analysis is to determine if the ACA made an impact on the health of adults between the ages of 19-64. 
 
 ## Technologies
 Project created with:
@@ -62,44 +64,37 @@ The data used for analysis in this project was pulled from CDC WONDER and the Un
 The data was pulled from each website and loaded into a single excel file:
    - All states All Data Collected.xlsx contains all data collected for every state  
   
-There was little processing needed, as all the data collected contained values for all states, so the data was then split into two sets:
-
-   - 31 states that have adpoted and expanded Medicare coverage: HEALTH DATA Adopted.xlsx
-   - 19 states that have either not adopted Medicare expansion (13 states) or have not expanded it (6 states) prior to 2018 when: Health Data Not Adopted.xlsx
-
+Then the data was read into pandas and split into two subgroup:
+   - states that had adopted and expanded Medicare coverage
+   - states that had either not adpoted and/or expanded Medicare coverage as of 2018. 
 
 ## Exploratory Data Analysis
 
-The scatter matrix plot of all data collected in all states shows correlation between many categories and it appears most the data is normally distributed as you would expect from a population. 
+The histograms of all the data sets collected show that the majority of the data is normally distributed. 
 
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_all_states_all_data.png)
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/All_States_All_Data_Histograms.png)
 
-I then used a heatmap matrix to better see the correlations between the data, so I could eliminate data that was not useful or did not speak to changes in medicare. Example - physical activity is a good indicator of health, but should not change the health in a state due to expanded medicare coverage. 
+The heatmap matrix shows general correlations between the different dataset, and I am hoping to find differing correlations with the split datasets. 
 
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_all_states_all_data.png)
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Heatmap_all_States.png)
 
-Then, after eliminating extraneous and unuseful data, I reran the scatter matrix plot of the data separated by states that expanded medicare coverage and those that did not. The plots showed high correlation between the categories and it appears most the data is normally distributed. 
+Now separating the data and looking at histograms of the datasets for states that did expand coverage, you can see that most the data appears to be normally distributed.
 
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Expanded_Histograms.png)
+Sthea
 
+The Heatmap matrix shows correlations decreasing between poor health characteristics (obesity, death rates, etc) and categories associated with low access to health care (uninsured rates etc), and correlations seem to be increase between good health characteristics (good mental health, etc.) and categories associated with low access to care. 
 
-Then separating the data and looking at the correlation between categories for states that expanded coverage.
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Heatmap_states_expanded.png)
 
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_expanded.png)
+The histograms for states that did not increase coverage show the data seems to be relatively normally distributed. 
 
-
-Heatmap matrix to better view and understand the correlations.
-
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_expanded.png)
-
-
-Looking at the correlation between categories for states that  did not expanded coverage 
-
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Scatter_Matrix_notex.png)
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Not_Histograms.png)
 
 
-And a heatmap for states that did not expand coverage
+Looking at the correlation between categories for states that  did not expand coverage has some interesting trends as well. 
 
-![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/Notebooks/Heatmap_notex.png)
+![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Heatmap_States_NOT.png)
 
 
 ## Hypothesis Testing
