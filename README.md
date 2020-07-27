@@ -98,85 +98,245 @@ Looking at the correlation between categories for states that  did not expand co
 
 Welch's t-test was used to answer if the means of the two samples (states with expanded medicare coverage vs states without expanded medicare coverage) were equal because the samples differ in size and therefore the variance is unequal. It was also assumed the two sample distributions of each category were normally distributed, which can be inferred from the histograms above. 
 
+Question: Do states that have expanded Medicaid Coverage differ access and public health characteristics than states that do not?
+
 ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.05)
 
-A Bonferroni correction is used to compensates for testing each individual hypothesis simultaneously. Therefore, the following tests will use a significance level of ![formula](https://render.githubusercontent.com/render/math?math=\alpha/20).
+A Bonferroni correction is used to compensates for testing each individual hypothesis simultaneously, therefore the following tests will use a significance level of ![formula](https://render.githubusercontent.com/render/math?math=\alpha/20).
 
-Therefore, ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.0025)
+So, ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.0025)
 
-
-Question: Do states that have expanded Medicaid Coverage differ public health characteristics than states that do not?
-
-  For the following test: 
+ To answer the question, the follow test have the hypothesis: 
   
    ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean expanded coverage = Mean not expanded coverage. 
    
    ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,hd != Mean_not_expanded,hd    
   
-  1. Death rates due to heart disease:
+
+1. Death rates due to heart disease:
   
-        Mean_expanded,hd: 160 deaths per 100,000
+  ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_HD.png)
+
+       Mean_expanded,hd: 160.2 deaths per 100,000
        
-        Mean_not_expanded,hd: 171 deaths per 100,000
+       Mean_not_expanded,hd: 170.9 deaths per 100,000
 
        T-Statistic: -1.31633, P-Value: 0.19616, P < alpha: False
      
-       Reject the null hypothesis, there is no difference in rates of heart disease deaths in states.
+       Reject the null hypothesis, there is no difference in rates of heart disease deaths.
      
  
- 2. Death rates due to cancer:
+2. Death rates due to cancer:
+ 
+  ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Cancer.png)
   
-       Mean_expanded,c: 150 deaths per 100,0000
+       Mean_expanded,cancer: 149.7 deaths per 100,0000
        
-       Mean_not_expanded,c: 155 deaths per 100,000
+       Mean_not_expanded,cancer: 154.5 deaths per 100,000
   
-      ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean death rate due to cancer for states that expanded coverage = Mean death rate for states that have not expanded coverage. 
-       
-      ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,c != Mean_not_expanded,c
+       T-Statistic: -1.1487, P-Value: 0.2578, P < alpha: False
       
-       T-Statistic: -1.14874, P-Value: 0.257778, P < alpha: False
-      
-       Reject the null hypothesis, there is no difference in rates deaths due to cancer in states with.
+       Reject the null hypothesis, there is no difference in rates deaths due to cancer.
   
   
-  3. Reported Poor Health:
+3. Death rates due to stroke:
   
-       Mean_expanded,ph: 17.6% of adults report poor health
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Stroke.png)
   
-       Mean_not_expanded,ph: 18.5% of adults report poor health
-  
-      ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of people who report poor health in states that expanded coverage = Mean percentage of people who report poor health in states that did not expand coverage. 
+       Mean_expanded,stroke: 149.7 deaths per 100,0000
        
-      ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,ph != Mean_not_expanded,ph
+       Mean_not_expanded,stroke: 154.5 deaths per 100,000
      
-       T-Statistic: -1.00402, P-Value: 0.32097, P < alpha: False
+       T-Statistic: -2.3968, P-Value: 0.0216, P < alpha: False
      
-       Reject the null hypothesis, there is no difference in self reported poor health in states.
+       Reject the null hypothesis, there is no difference in rates deaths due to stroke.
     
   
-  4. Reported Poor Mental Health:
+4. Death rates due to suicide:
   
-        Mean_expanded,pmh:  23.1% of adults report poor mental health
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_suicide.png)
+  
+       Mean_expanded,suicide:  15.9 deaths per 100,0000
         
-        Mean_not_expanded,pmh: 22.8% of adults report poor mental health
- 
-        ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of people who report poor mental health in states that expanded coverage = Mean percentage of people who report poor mental health in states that did not expand coverage. 
+       Mean_not_expanded,suicide: 17.3 deaths per 100,0000
+     
+       T-Statistic: -1.1916, P-Value: 0.2395, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in deaths due to suicide.
        
-        ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,pmh != Mean_not_expanded,pmh
-     
-        T-Statistic: -6.61328, P-Value: 2.90350e-08, P < alpha: True
-     
-        Do not reject the null hypothesis, there is a difference in self reported poor mental health in states.
-
-
-Question: Do states that have expanded Medicaid Coverage differ in access to healthcare?
-
-NOTE: A Bonferroni correction is used again to compensates for testing each individual hypothesis simultaneously. Therefore for the following 3 tests will use a significance level of ![formula](https://render.githubusercontent.com/render/math?math=\alpha/3).
- ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.0167)
   
-  1. Percentage of Uninsured Adults:
+ 5. Mortality rates:
   
-  ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/STATES_MEDICARE.png)
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Mortality.png)
+  
+       Mean_expanded,mortality:  728.5 per 100,0000
+        
+       Mean_not_expanded,mortality: 778.4 per 100,0000
+     
+       T-Statistic: -2.0245, P-Value: 0.0494, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in mortality rates.
+       
+ 
+ 6. Life Expectancy:
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_LE.png)
+  
+       Mean_expanded,suicide:  79.04
+        
+       Mean_not_expanded,suicide: 78.13
+     
+       T-Statistic: 1.8499, P-Value: 0.0713, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in life expectancy.
+
+ 
+ 7. Percent adults that are overweight or obese:
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Overweight.png)
+  
+       Mean_expanded,obesity:  65.6% adults are overweight or obese
+        
+       Mean_not_expanded,obesity: 67.6% adults are overweight or obese
+     
+       T-Statistic: -2.4229, P-Value: 0.0194, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in rates of obesity.
+  
+ 
+ 8. Percent adults that smoke:
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Smoke.png)
+ 
+       Mean_expanded,smoke: 16.4% of adults that smoke
+        
+       Mean_not_expanded,smoke: 17.0% of adults that smoke
+     
+       T-Statistic: -0.6858, P-Value: 0.4964, P < alpha: False
+      
+       Reject the null hypothesis, there is no difference in rates of adults that smoke
+       
+  
+ 9. Percent of adults that report excellent health
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_ExcH.png)
+  
+       Mean_expanded,excellent_health:  17.8% of adults report excellent health
+        
+       Mean_not_expanded,excellent_health: 17.1% of adults report excellent health
+     
+       T-Statistic: 1.2078, P-Value: 0.2337, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in percent of adults that report excellent health. 
+       
+
+ 10. Percent of adults that report very good health
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_VGHealth.png)
+  
+       Mean_expanded,very_good_health:  32.6% of adults report very good health
+        
+       Mean_not_expanded,very_good_health: 32.4% of adults report very good health
+     
+       T-Statistic: 0.2440, P-Value: 0.8085, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in percent of adults that report very good health.
+       
+   
+ 11. Percent of adults that report good health
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_suicide.png)
+  
+       Mean_expanded,good_health:  31.9% of adults report good health
+        
+       Mean_not_expanded,good_health: 31.9 of adults report good health
+     
+       T-Statistic: -0.0725, P-Value: 0.9425, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in percent of adults that report very good health.
+       
+       
+  12. Percent of adults that report fair health:
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Fair_Health.png)
+  
+       Mean_expanded,fair_health:  13.0% of adults report fair health
+        
+       Mean_not_expanded,fair_health: 13.3% of adults report fair health
+     
+       T-Statistic: -0.5396, P-Value: 0.5922, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in percent of adults that report fair health     
+       
+ 
+  13. Percent of adults that report poor health:
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Poor_Health.png)
+  
+       Mean_expanded,poor_health: 4.6% of adults report poor health
+        
+       Mean_not_expanded,poor_health: 5.2% of adults report poor health
+     
+       T-Statistic: -1.4605, P-Value: 0.1522, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in percent of adults that report poor health
+       
+  
+  14. Report Excellent Mental Health (0 Poor days):
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_EXCMH.png)
+  
+       Mean_expanded,excellent_mental:  63.3% of adults report excellent mental health
+        
+       Mean_not_expanded,excellent_mental: 64.1% of adults report excellent mental health
+     
+       T-Statistic: -1.1081, P-Value: 0.2751, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference the percentage of adults who reported excellent mental health.
+ 
+  
+  15. Report Good Mental Health (1-4 Poor Days):
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_GoodMH.png)
+  
+       Mean_expanded,good_mental:  13.7% of adults report good mental health
+        
+       Mean_not_expanded,good_mental: 13.0% of adults report good mental health
+     
+       T-Statistic: 1.5651, P-Value: 0.1259, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in the percentage of adults who reported good mental health.
+ 
+ 
+  16. Reported Fair Mental Health (5-13 Days Poor):
+ 
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_FairMH.png)
+  
+       Mean_expanded,fair_mental:  10.2 of adults report fair mental health
+        
+       Mean_not_expanded,fair_mental: 9.7% of adults report fair mental health
+     
+       T-Statistic: 1.6392, P-Value: 0.1107, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in the percentage of adults who reported fair mental health. 
+   
+   
+  17. Reported Bad Mental Health (14+ Days Poor):
+ 
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_BADMH.png)
+  
+       Mean_expanded,bad_mental:  12.8% of adults report poor mental health
+        
+       Mean_not_expanded,bad_mental: 13.1% of adults report poor mental health
+     
+       T-Statistic: -0.5301, P-Value: 0.5987, P < alpha: False
+     
+       Reject the null hypothesis, there is no difference in the percentage of adults who report bad mental health.
+       
+
+  18. Percentage of Uninsured Adults:
+  
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Uninsured.png)
   
         Mean_expanded,uninisured: 9.51% of adults are uninsured
          
@@ -187,39 +347,35 @@ NOTE: A Bonferroni correction is used again to compensates for testing each indi
         Do not reject the null hypothesis, there is a difference in percentage of uninsured adults in states with expanded coverage vs states without expanded coverage.
   
   
-  2. Reported inability to get care due to cost:
-  
+  19. Reported inability to get care due to cost:
+       
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_No_care.png)
+     
         Mean_expanded,cost: 11.3% of adults do not get medical care due to cost
          
         Mean_not_expanded,cost: 14.2% of adults do not get medical care due to cost
- 
-       ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of adults that report an inibility to get care due to cost in states that states that expanded coverage = Mean percentage of adults that report an inibility to get care due to cost in states that have not expanded coverage. 
-       
-       ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,cost != Mean_not_expanded,cost
      
-       T-Statistic: -4.33, P-Value: 0.0001188, P < alpha: True
+       T-Statistic: -4.3307, P-Value: 0.0001, P < alpha: True
   
-       Do not reject the null hypothesis, there is a difference in percentage of adults who do not get care due to cost in states.
+        Do not reject the null hypothesis, there is a difference in percentage of adults who do not get care due to cost in states.
         
         
-  3. Rates of individuals who had trouble paying off medical bills during past twelve month:
+  20. Rates of individuals who had trouble paying off medical bills during past twelve month:
   
-        Mean_expanded,bills: 27.2% of adults have trouble paying off their medical bills
-  
-        Mean_not_expanded,bills: 34.4% of adults have trouble paying off their medical bills
-  
-      ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of adults that have trouble paying off medical bills for states that expanded coverage = Mean percentage of adults that have trouble paying off medical bills for states that have not expanded coverage. 
+   ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Box_Trouble.png)
        
-      ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,bills != Mean_not_expanded,bills
+       Mean_expanded,bills: 27.1% of adults have trouble paying off their medical bills
+  
+       Mean_not_expanded,bills: 34.4% of adults have trouble paying off their medical bills
       
-       T-Statistic: -4.8651, P-Value: 1.3536e-05, P < alpha: True
+       T-Statistic: -4.8651, P-Value: 0.0000, P < alpha: True
       
-       Do not reject the null hypothesis, there is a difference in percentage of adults who have trouble paying off medical bills in states.
+       Do not reject the null hypothesis, there is a difference in percentage of adults who have trouble paying off medical bills in states the have expanded medicare versus states that have not expanded medicare.
        
 
 ## Conclusion
 
-As expected, there was an increase in access to healthcare for states that expanded coverage, however surprisingly that increase has only helped improve mental health in those states.
+As expected we can say that there is a difference in access to health care, but there does not seem to be a difference in health of adults between the ages of 19-64.
 
 ## Future Steps
 
