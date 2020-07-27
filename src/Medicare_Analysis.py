@@ -154,7 +154,7 @@ t_score_fair_health, pval_fair_health = stats.ttest_ind_from_stats(fair_health_m
 print(f"T-Statistic: {t_score_fair_health:.4f}, P-Value: {pval_fair_health:.4f}, P < alpha: {pval_fair_health < alpha}")
 
 #Welch's t-test % Adults, Health Good
-t_score_good_health, pval_good_health = stats.ttest_ind_from_stats(stroke_mean_expanded, std_good_health_expanded, n_expanded, good_health_mean_nexpanded, std_good_health_nexpanded, n_not_expanded, equal_var=False)
+t_score_good_health, pval_good_health = stats.ttest_ind_from_stats(good_health_mean_expanded, std_good_health_expanded, n_expanded, good_health_mean_nexpanded, std_good_health_nexpanded, n_not_expanded, equal_var=False)
 print(f"T-Statistic: {t_score_good_health:.4f}, P-Value: {pval_good_health:.4f}, P < alpha: {pval_good_health < alpha}")
 
 #Welch's t-test % Adults, Health Very Good
