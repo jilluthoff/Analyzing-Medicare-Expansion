@@ -2,7 +2,8 @@
 
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/STATES_MEDICARE.png)
 
-With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (aka Obamacare) which gave states the option to expand their Medicaid programs actually helped to increase the populations health.
+With the 2020 election on the horizon and healthcare reform as a major discussion point, this project intended to better understand if the Affordable Care Act (aka Obamacare), which gave states the option to expand their Medicaid programs, actually made a difference in the health of adults between the ages of 19-64. 
+
 
 ## Table of contents
 * [Background](#background)
@@ -24,8 +25,6 @@ The Affordable Care Act (ACA) was passed in 2010 and implented in many states in
 3. Support innovative medical care delivery methods designed to lower the cost of health care generally. 
 
 Coverage for Medicaid expansion adults (people between the ages 19 - 64 who are low income) contains the ACA’s ten “essential health benefits” which include preventive services and expanded mental health and substance use treatment services. Medicaid plays an important role in addressing the opioid epidemic and more broadly in connecting Medicaid beneficiaries to behavioral health (addiction - drinking, smoking, eating) services. 
-
-The goal of this analysis is to determine if the ACA made an impact on the health of adults between the ages of 19-64. 
 
 ## Technologies
 Project created with:
@@ -81,7 +80,6 @@ The heatmap matrix shows general correlations between the different dataset, and
 Now separating the data and looking at histograms of the datasets for states that did expand coverage, you can see that most the data appears to be normally distributed.
 
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Expanded_Histograms.png)
-Sthea
 
 The Heatmap matrix shows correlations decreasing between poor health characteristics (obesity, death rates, etc) and categories associated with low access to health care (uninsured rates etc), and correlations seem to be increase between good health characteristics (good mental health, etc.) and categories associated with low access to care. 
 
@@ -91,7 +89,6 @@ The histograms for states that did not increase coverage show the data seems to 
 
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Not_Histograms.png)
 
-
 Looking at the correlation between categories for states that  did not expand coverage has some interesting trends as well. 
 
 ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/Heatmap_States_NOT.png)
@@ -99,25 +96,28 @@ Looking at the correlation between categories for states that  did not expand co
 
 ## Hypothesis Testing
 
-Welch's t-test was used to answer if the means of the two samples (states with expanded medicare coverage vs states without expanded medicare coverage) were equal, since the populations differ in size, therefore the variance is unequal. It was also assumed the two sample distributions of each category were normally distributed, which can be inferred from the analysis above. 
+Welch's t-test was used to answer if the means of the two samples (states with expanded medicare coverage vs states without expanded medicare coverage) were equal because the samples differ in size and therefore the variance is unequal. It was also assumed the two sample distributions of each category were normally distributed, which can be inferred from the histograms above. 
 
 ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.05)
 
-Question: Do states that have expanded Medicaid Coverage differ in public health characteristics?
+A Bonferroni correction is used to compensates for testing each individual hypothesis simultaneously. Therefore, the following tests will use a significance level of ![formula](https://render.githubusercontent.com/render/math?math=\alpha/20).
+
+Therefore, ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.0025)
+
+
+Question: Do states that have expanded Medicaid Coverage differ public health characteristics than states that do not?
+
+  For the following test: 
   
-  NOTE: A Bonferroni correction is used to compensates for testing each individual hypothesis simultaneously. Therefore, the following 4 tests will use a significance level of ![formula](https://render.githubusercontent.com/render/math?math=\alpha/4).
-  ![formula](https://render.githubusercontent.com/render/math?math=\alpha=0.0125)
+   ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean expanded coverage = Mean not expanded coverage. 
+   
+   ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,hd != Mean_not_expanded,hd    
   
   1. Death rates due to heart disease:
   
         Mean_expanded,hd: 160 deaths per 100,000
        
         Mean_not_expanded,hd: 171 deaths per 100,000
-  
-       ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean death rate due to heart disease for states that expanded coverage = Mean death rate due to heart disease for states that have not expanded coverage. 
-       
-       
-       ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,hd != Mean_not_expanded,hd
 
        T-Statistic: -1.31633, P-Value: 0.19616, P < alpha: False
      
@@ -176,17 +176,15 @@ NOTE: A Bonferroni correction is used again to compensates for testing each indi
   
   1. Percentage of Uninsured Adults:
   
-        Mean_expanded,uninisured: 6.7% of adults are uninsured
+  ![alt text](https://github.com/jilluthoff/Analyzing-Medicare-Expansion/blob/master/images/STATES_MEDICARE.png)
+  
+        Mean_expanded,uninisured: 9.51% of adults are uninsured
          
-        Mean_not_expanded,uninsured: 10.6% of adults are unisured 
-         
-        ![formula](https://render.githubusercontent.com/render/math?math=H_0:) Mean percentage of uninsured adults in states that expanded coverage = Mean percentage of uninsured adults in states that have not expanded coverage. 
-       
-        ![formula](https://render.githubusercontent.com/render/math?math=H_A:) Mean_expanded,uninisured != Mean_not_expanded,uninsured
+        Mean_not_expanded,uninsured: 15.3% of adults are unisured 
      
-        T-Statistic: -5.30128, P-Value: 8.03637e-06, P < alpha: True
+        T-Statistic: -5.2923, P-Value: 0.0000, P < alpha: True
      
-        Do not reject the null hypothesis, there is a difference in percentage of uninsured adults in states.
+        Do not reject the null hypothesis, there is a difference in percentage of uninsured adults in states with expanded coverage vs states without expanded coverage.
   
   
   2. Reported inability to get care due to cost:
